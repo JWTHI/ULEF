@@ -10,6 +10,8 @@ This repository requires the UMAP for python to be installed. According to [3], 
 
 The functions itself are implemented in MATLAB calling Python subfunctions.
 
+At least MATLAB 2019a is required to run the examples.
+
 ## Examples
 ### Results on road infrastructure images
 The [images](/Data) used for the outlier detection are generated with an extension of the [openDRIVE tool](https://github.com/JWTHI/openDRIVE-Matlab). Here, the route as in [1] is shown.  
