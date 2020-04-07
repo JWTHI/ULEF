@@ -95,7 +95,7 @@ D{5}(201:300,1) =  D{5}(201:300,1)+6;
 
 
 %% Data Processing
-for i=5:5
+for i=1:5
     DataBase = D{i};
     minData = min(DataBase);
     maxData = max(DataBase);
