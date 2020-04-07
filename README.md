@@ -5,16 +5,16 @@ This repository provides an experimental implementation for the outlier score *U
 The ULEF score is calculated based on the weighted nearest neighbor graph which is constructed during the dimensionaltiy reduction using UMAP. The implementation is based on the original implementation of UMAP [2].
 
 ## Requirements
-This repository requires the UMAP python to be installed. According to [3], it can be installed trough
+This repository requires the UMAP for python to be installed. According to [3], it can be installed with
 `pip install umap-learn`, given that `numba`, `scikit-learn` and hence `numpy` and `scipy` are installed.
 
 The functions itself are implemented in MATLAB calling Python subfunctions.
 
 ## Examples
 ### Results on road infrastructure images
-The [images](../Data) used for the outlier detection are generated with a extension of the [openDRIVE tool](https://github.com/JWTHI/openDRIVE-Matlab). Here the route as in [1] is shown.  
+The [images](/Data) used for the outlier detection are generated with an extension of the [openDRIVE tool](https://github.com/JWTHI/openDRIVE-Matlab). Here, the route as in [1] is shown.  
 
-The [base dataset](../Data/MUC_B300_n) is used with one of the images in the [outlier dataset](A9_THI_Residential), generating the oulier score as indicated by the color  in the figure.  
+The [base dataset](/Data/MUC_B300_n) is used with one of the images in the [outlier dataset](/Data/A9_THI_Residential), generating the outlier score as indicated by the color  in the figure.  
 Running `main_scenario_route.m` will reproduce the figure.  
  
 | <img src="Examples/route.png" width="410"> |
@@ -23,16 +23,13 @@ Running `main_scenario_route.m` will reproduce the figure.
 
 
 ### Results on toy datasets
-The [images](../Data) used for the outlier detection are generated with a extension of the [openDRIVE tool](https://github.com/JWTHI/openDRIVE-Matlab). Here the route as in [1] is shown.  
+The methods abilities are presented using 5 toy datasets. The results can be seen in the following figure. Blue indicates high and yellow low outliership.  
+Running `main ` will reproduce the figure. The execution might take very long.
 
-The [base dataset](../Data/MUC_B300_n) is used with one of the images in the [outlier dataset](../Data/A9_THI_Residential), generating the oulier score as indicated by the color  in the figure.  
-Running `main_scenario_route.m` will reproduce the figure.  
- 
 
-| <img src="Examples/circle.png" width="200"> | <img src="Examples/moons.png" width="200"> |
-|:---:|:---:|
-| <img src="Examples/diffblobs.png" width="200"> | <img src="Examples/blobs.png" width="200"> |
-| <img src="Examples/longblobs.png" width="200"> |  |
+| <img src="Examples/circle.png" width="200"> | <img src="Examples/moons.png" width="200"> | <img src="Examples/diffblobs.png" width="200"> |  
+|:---:|:---:|:---:|  
+| <img src="Examples/blobs.png" width="200"> | <img src="Examples/longblobs.png" width="200"> |  |  
 
 ## Usage
 Within this repository, two different types of implementations are used.
@@ -63,14 +60,25 @@ Within this repository, two different types of implementations are used.
 	- Example `main_scenario_route.m`  
 	The script is generating the [plot](#Results-on-road-infrastructure-images).
 ## License
-[LICENSE](LICENSE.txt)
+[LICENSE](LICENSE)
 
 ## References
-[2]: UMAP !!!! paper
+[1]: **An Entropy Based Outlier Score and its Application to Novelty Detection for Road Infrastructure Images**; Jonas Wurst, Alberto Flores Fernández, Michael Botsch and Wolfgang Utschick; *2020 IEEE Intelligent Vehicles Symposium (IV)*; [Paper](tba)
 
-[3]: UMAP !!!! code
+[2]: **UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction**; Leland McInnes, John Healy, James Melville; *2018*; [Paper](https://arxiv.org/abs/1802.03426)
 
-[1]: An Entropy Based Outlier Score and its Application to Novelty Detection for Road Infrastructure Images
+
+[3]: **UMAP: Uniform Manifold Approximation and Projection**; Leland McInnes, John Healy, Nathaniel Saul, Lukas Grossberger; *2018 The Journal of Open Source Software vol.3 #29*; [Code](https://github.com/lmcinnes/umap)
+
+
 
 ## Citation
-process
+To cite the work use:
+```
+@INPROCEEDINGS{WurstIV20,
+author={J. {Wurst} and A. {Flores Fernández} and M. {Botsch} and W. {Utschick}},
+booktitle={2020 IEEE Intelligent Vehicles Symposium (IV)},
+title={{An Entropy Based Outlier Score and its Application to Novelty Detection for Road Infrastructure Images}},
+year={2020}
+}
+```
