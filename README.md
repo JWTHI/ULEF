@@ -17,7 +17,7 @@ The [images](../Data) used for the outlier detection are generated with a extens
 The [base dataset](../Data/MUC_B300_n) is used with one of the images in the [outlier dataset](A9_THI_Residential), generating the oulier score as indicated by the color  in the figure.  
 Running `main_scenario_route.m` will reproduce the figure.  
  
-| <img src="file:///./Examples/route.png" width="410"> | |
+| <img src="Examples/route.png" width="410"> |
 |:---:|
 | Route |
 
@@ -29,10 +29,10 @@ The [base dataset](../Data/MUC_B300_n) is used with one of the images in the [ou
 Running `main_scenario_route.m` will reproduce the figure.  
  
 
-| <img src="file:///./Examples/circle.png" width="200"> | <img src="file:///./Examples/moons.png" width="200"> |
+| <img src="Examples/circle.png" width="200"> | <img src="Examples/moons.png" width="200"> |
 |:---:|:---:|
-| <img src="file:///./Examples/diffblobs.png" width="200"> | <img src="file:///./Examples/blobs.png" width="200"> |
-| <img src="file:///./Examples/longblobs.png" width="200"> |  |
+| <img src="Examples/diffblobs.png" width="200"> | <img src="Examples/blobs.png" width="200"> |
+| <img src="Examples/longblobs.png" width="200"> |  |
 
 ## Usage
 Within this repository, two different types of implementations are used.
