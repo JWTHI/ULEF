@@ -2,7 +2,7 @@
 ## Introduction
 This repository provides an experimental implementation for the outlier score *UMAP-based [2] Local Entropy Factor* (ULEF). The method is presented in the work "An Entropy Based Outlier Score and its Application to Novelty Detection for Road Infrastructure Images" published in [31st IEEE Intelligent Vehicles Symposium 2020](https://2020.ieee-iv.org/) [1].
 
-The ULEF score is calculated based on the weighted nearest neighbor graph which is constructed during the dimensionaltiy reduction using UMAP. The implementation is based on the original implementation of UMAP [2].
+The ULEF score is calculated based on the weighted nearest neighbor graph which is constructed during the dimensionality reduction using UMAP. The implementation is based on the original implementation of UMAP [2].
 
 ## Requirements
 This repository requires the UMAP for python to be installed. According to [3], it can be installed with
@@ -47,7 +47,7 @@ Within this repository, two different types of implementations are used.
 	**Note**: Execution may take very long, since the standard function is used. For faster execution the `outlierULEF_D` should be used.
 2. Delta use (slow for single use, fast for repeated use)
 	- Function `[ ULEF,rhos,sigmas] = outlierULEF_D(knnDists, knnIndex, Data, k, RNS, D, rhosOld, sigmasOld, knnIndexOld, ULEFOld)`  
-	The function calculates the ULEF score. But here, it only new data points are considered, for the old data points, the previous information is used if the neighborhood did not change. A new data point has tpo be the last in the dataset.
+	The function calculates the ULEF score. But here, it only new data points are considered, for the old data points, the previous information is used if the neighborhood did not change. A new data point has to be the last in the dataset.
 		- `knnDists` : **Current** Distance to nearest neighbor, including the outlier.
 		- `D`: **Current** Distance matrix
 		- `rhosOld`: **Previous** distance to closest neighbor per data point (required for weight calculation)
