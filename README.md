@@ -10,7 +10,7 @@ This repository requires the UMAP for python to be installed. According to [3], 
 
 The functions itself are implemented in MATLAB calling Python subfunctions.
 
-Tested with MATLAB 2019a, 2019b and Python 3.7.
+Tested with MATLAB 2019a, 2019b, 2020a and Python 3.7.
 
 ## Examples
 ### Results on road infrastructure images
