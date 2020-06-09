@@ -28,7 +28,7 @@ function [ULEF,USLEF,knnIndex] = outlierULEF(Data, k, RNS)
         idx = knnIndex(iIN,2:k+1);
         % Get scores for incoming affinity of knns
         for jIN=1:numel(idx)
-            dist = knnDist(iIN,jIN);
+            dist = knnDist(iIN,jIN+1);
             if dist - rhos(idx(jIN)) <= 0.0
                 PSub(jIN) = 1;
             else

@@ -5,8 +5,14 @@ This repository provides an experimental implementation for the outlier score *U
 The ULEF score is calculated based on the weighted nearest neighbor graph which is constructed during the dimensionality reduction using UMAP. The implementation is based on the original implementation of UMAP [2].
 
 ## Requirements
-This repository requires the UMAP for python to be installed. According to [3], it can be installed with
-`pip install umap-learn`, given that `numba`, `scikit-learn` and hence `numpy` and `scipy` are installed.
+This repository requires UMAP (v0.3.8) for python to be installed. It can be installed with
+`pip install umap-learn==0.3.8`. If `joblib` can not be imported, replace the `from sklearn.external import joblib` lines with
+```python
+try:
+	import joblib
+except:
+	from sklearn.external import joblib
+``` 
 
 The functions itself are implemented in MATLAB calling Python subfunctions.
 
